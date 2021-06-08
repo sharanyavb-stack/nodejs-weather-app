@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>About</title>
+        <link rel="icon" href="/img/weather.png">
+        <link rel="stylesheet" href="./css/styles.css"/>
+        <script src="/js/app.js"></script>
+    </head>
+    <body>
+        <div class="main-content">
+            {{>header}}
+            {{!-- {{>header}} get partial component - to render header --}}
+            <h1>{{info}}</h1>
+            <h2>{{name}}</h2>
+            <img class="portrait" src="/img/20150413_214337-1.jpg"/>
+            {{!-- <img src="/img/20150413_214337-1.jpg"> --}}
+       </div>
+         {{>footer}}
+    </body>
+</html>
