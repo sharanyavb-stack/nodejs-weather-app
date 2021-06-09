@@ -36,7 +36,7 @@ app.get('/help', (req, res)=> {
     res.render('help', {
         message: 'Contact 9652260966',
         title: 'Need Help?',
-        name: 'Pavan Avirneni'
+        name: 'Sharanya'
     })
 })
 // static loading pages
