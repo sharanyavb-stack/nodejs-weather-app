@@ -4,7 +4,7 @@ const {geoCode, forecast} = require('./utils/geocode')
 const hbs = require('hbs'); // hbs  to create partial application (reusable modules)
 
 const  app = express();
-
+const port = process.env.PORT || 3000;
 // define paths for Express config
 // we should provide absolute path when we are integrating static HTML
 const publicDirectory = path.join(__dirname, '../public')
@@ -104,7 +104,7 @@ app.get('*', (req, res)=> {
 //     res.send('About Page')
 // })
 
-app.listen(3000, () => {// 3000 is port and this helps to start server
+app.listen(port, () => {// 3000 is port and this helps to start server
 // runs when server is up.. 
-console.log('Server is up on port 3000');
+console.log('Server is up on port' + port);
 }) // use localhost:3000 in browser to see result
