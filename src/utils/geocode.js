@@ -4,7 +4,7 @@ const geoCode = (address, callback) => {
     request({
         url,
         json: true
-    }, (err, {body}) => {
+    }, (err, {body} = {}) => {
         if(err) {
             callback('Error');
         } else if(body.features.length === 0) {
@@ -29,7 +29,10 @@ const forecast = (latitude, longitude, callback) => {
             callback('API Error');
 
         } else {
-            callback(undefined,`${res.body.current.weather_descriptions[0]} Its is ${res.body.current.temperature} it feels like ${res.body.current.feelslike}`);
+            callback(undefined,`Temperature is ${res.body.current.temperature} ${res.body.current.temperature > 40 ?
+            '🌞' : res.body.current.temperature < 20 ? '⛄' : '🌥' }...
+            ${res.body.current.weather_descriptions[0]} Its is ${res.body.current.temperature} it feels like ${res.body.current.feelslike}. 
+            Humidity is ${res.body.current.humidity}`);
         }
     })  
 }

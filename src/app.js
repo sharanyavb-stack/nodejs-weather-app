@@ -34,9 +34,9 @@ app.get('/about', (req, res)=> {
 })
 app.get('/help', (req, res)=> {
     res.render('help', {
-        message: 'Contact for help 9898987778',
-        title: 'Help Me',
-        name: 'Pavan'
+        message: 'Contact 9652260966',
+        title: 'Need Help?',
+        name: 'Pavan Avirneni'
     })
 })
 // static loading pages
